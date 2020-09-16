@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'VsIgnite' do
-  # Pods for VsIgnite
+target 'NewsApp' do
+  # Pods for NewsApp
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -35,7 +35,7 @@ target 'VsIgnite' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
-  target 'VsIgniteTests' do
+  target 'NewsAppTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -43,13 +43,13 @@ target 'VsIgnite' do
   use_native_modules!
 end
 
-target 'VsIgnite-tvOS' do
+target 'NewsApp-tvOS' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for VsIgnite-tvOS
+  # Pods for NewsApp-tvOS
 
-  target 'VsIgnite-tvOSTests' do
+  target 'NewsApp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -64,7 +64,7 @@ post_install do |installer|
       " && RNC_ROOT=./node_modules/react-native-config/"\
       " && export SYMROOT=$RNC_ROOT/ios/ReactNativeConfig"\
       " && ruby $RNC_ROOT/ios/ReactNativeConfig/BuildDotenvConfig.ruby"
-      
+
       target.build_phases << phase
       target.build_phases.move(phase,0)
     end

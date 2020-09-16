@@ -1,5 +1,5 @@
 {
-  "name": "VsIgnite",
+  "name": "NewsApp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -26,6 +26,8 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.11.0",
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/netinfo": "^5.9.6",
+    "@react-native-community/toolbar-android": "^0.1.0-rc.2",
     "apisauce": "1.0.3",
     "format-json": "1.0.3",
     "identity-obj-proxy": "3.0.0",
